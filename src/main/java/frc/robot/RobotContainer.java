@@ -23,14 +23,14 @@ public class RobotContainer {
   //make drive subsystem
 public final DriveSubsystem driveSubsystem = new DriveSubsystem();
   //make controller
-  public final XboxController banana = new XboxController(0);
+public final XboxController banana = new XboxController(0);
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
     // Configure the button bindings
     driveSubsystem.setDefaultCommand(
       new RunCommand( () ->
-        driveSubsystem.drive(banana.getLeftY())*0.55, banana.getRightY()*0.55), driveSubsystem));
+        driveSubsystem.drive(banana.getLeftY()*0.55, banana.getRightY()*0.55), driveSubsystem));
   
   }
 
@@ -40,12 +40,12 @@ public final DriveSubsystem driveSubsystem = new DriveSubsystem();
    * edu.wpi.first.wpilibj.Joystick} or {@link XboxController}), and then passing it to a {@link
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
-  private void configureButtonBindings() {
+  private void configureButtonBindings(XboxController banana) {
     //map buttons if needed
+    
   }
    
   
-s
   public DriveSubsystem getDriveSubsystem() {
     return driveSubsystem;
   }
